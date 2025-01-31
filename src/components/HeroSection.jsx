@@ -1,8 +1,10 @@
+import heroBackground from '../assets/hero-background.webp';
+
 const HeroSection = () => {
   return (
     <div className="relative w-screen h-[32rem]">
       <img
-        src="/src/assets/hero-background.webp"
+        src={heroBackground}
         alt="Hero Background"
         className="w-screen h-full object-cover object-center"
         style={{ objectPosition: 'center 30%' }}
