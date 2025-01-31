@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Author';
+  src: url('./assets/fonts/Author-Variable.woff2') format('woff2'),
+       url('./assets/fonts/Author-Variable.woff') format('woff'),
+       url('./assets/fonts/Author-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Author';
+  src: url('./assets/fonts/Author-VariableItalic.woff2') format('woff2'),
+       url('./assets/fonts/Author-VariableItalic.woff') format('woff'),
+       url('./assets/fonts/Author-VariableItalic.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+@layer base {
+  * {
+    font-family: 'Author', system-ui, sans-serif;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
