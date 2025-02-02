@@ -29,3 +29,11 @@
 body {
   overflow-x: hidden;
 }
+
+@theme {
+  --font-display: 'Author', 'system-ui', 'sans-serif',
+
+  --color-pink-700: #D01E50;
+  --color-sky-600 : #1D89CA;
+
+}

@@ -3,6 +3,9 @@ import fb from '../assets/pink_fb.webp';
 import ig from '../assets/pink_ig.webp';
 import pinterest from '../assets/pink_pinterest.webp';
 import comingSoonImage from '../assets/Coming-soon-banner.webp';
+import planSolo from '../assets/plan-solo.webp';
+import planCouple from '../assets/plan-couple.webp';
+import planGroup from '../assets/plan-group.webp';
 
 const INDIAN_STATES_AND_UTS = [
   { region: 'North', states: ['Jammu and Kashmir', 'Himachal Pradesh', 'Punjab', 'Haryana', 'Uttarakhand', 'Delhi'] },
@@ -60,18 +63,18 @@ const TripBookingForm = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 space-y-6">
+    <div className="max-w-6xl mx-auto px-4 py-8 space-y-6">
       <div className="bg-white rounded-2xl shadow-lg shadow-pink-300 p-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-50/50 to-transparent"></div>
+        <div className="absolute inset-0 "></div>
         <div className="relative">
-          <h2 className="text-3xl font-bold text-gray-800 border-b-2 border-pink-700 pb-4 mb-6">TRAVELLER DETAILS</h2>
+          <h2 className="text-3xl font-bold text-black border-b-2 border-pink-700 pb-4 mb-6">TRAVELLER DETAILS</h2>
           <div className="space-y-6">
             <div>
               <label className="block text-lg text-black mb-2">Your name</label>
               <input
                 type="text"
                 placeholder="Full name"
-                className="w-full px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800"
+                className="w-3/6 px-4 py-2 border border-pink-700 focus:outline-none focus:ring-1 focus:ring-pink-800"
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
               />
@@ -81,7 +84,7 @@ const TripBookingForm = () => {
               <input
                 type="text"
                 placeholder="Country name"
-                className="w-full px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800"
+                className="w-54 px-4 py-2 border border-pink-700 focus:outline-none focus:ring-1 focus:ring-pink-800"
                 value={formData.country}
                 onChange={(e) => setFormData({ ...formData, country: e.target.value })}
               />
@@ -91,7 +94,7 @@ const TripBookingForm = () => {
               <input
                 type="email"
                 placeholder="example@email.com"
-                className="w-full px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800"
+                className="w-3/6 px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -101,14 +104,14 @@ const TripBookingForm = () => {
       </div>
 
       <div className="bg-white rounded-2xl shadow-lg shadow-pink-300 p-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-50/50 to-transparent"></div>
+        <div className="absolute inset-0 "></div>
         <div className="relative">
           <h2 className="text-3xl font-bold text-black border-b-2 border-pink-700 pb-4 mb-6">JOURNEY DETAILS</h2>
           
           <div className="space-y-6">
             <div>
               <label className="block text-lg text-black mb-2">Where are you going? [Can Select Multiple States]</label>
-              <div className="w-full border border-pink-700 rounded-md">
+              <div className="w-full border border-pink-700 ">
                 {INDIAN_STATES_AND_UTS.map((region) => (
                   <div key={region.region} className="p-2 border-b border-pink-200">
                     <div className="font-bold text-pink-700 mb-2">{region.region}</div>
@@ -132,9 +135,9 @@ const TripBookingForm = () => {
 
             <div>
               <label className="block text-lg text-black mb-2">When are you going?</label>
-              <div className="grid grid-cols-2 gap-4">
+              <div className=" grid grid-cols-4 ">
                 <select
-                  className="w-full px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800 appearance-none bg-white"
+                  className="w-44 px-4 py-2 border border-pink-700 focus:outline-none focus:ring-1 focus:ring-pink-800 appearance-none bg-white"
                   value={formData.travelMonth}
                   onChange={(e) => setFormData({ ...formData, travelMonth: e.target.value })}
                 >
@@ -144,7 +147,7 @@ const TripBookingForm = () => {
                   ))}
                 </select>
                 <select
-                  className="w-full px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800 appearance-none bg-white"
+                  className="w-44 px-4 py-2 border border-pink-700 focus:outline-none focus:ring-1 focus:ring-pink-800 appearance-none bg-white"
                   value={formData.travelYear}
                   onChange={(e) => setFormData({ ...formData, travelYear: e.target.value })}
                 >
@@ -156,47 +159,61 @@ const TripBookingForm = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 space-y-2">
-              <h3 className="text-xl font-semibold mb-2">Select your plan</h3>
-              <p className="text-md text-black">This plan offers you the ultimate solution for a stress-free and safe journey throughout India.</p>
-              <p className="text-md font-medium text-pink-700">Pay only for your trip days in India</p>
-              
-              <div className="grid grid-cols-3 gap-6">
-                {[
-                  { type: 'Solo', price: 5, icon: '👤' },
-                  { type: 'Couple', price: 9, icon: '👥' },
-                  { type: 'Group (up to 4)', price: 15, icon: '👥👥' }
-                ].map((plan) => (
-                  <div
-                    key={plan.type}
-                    className={`p-4 rounded-xl text-center cursor-pointer transition-all ${
-                      formData.planType === plan.type 
-                        ? 'bg-pink-50 border-2 border-pink-800' 
-                        : 'border border-pink-700'
-                    }`}
-                    onClick={() => handlePlanSelect(plan.type)}
-                  >
-                    <div className="text-4xl mb-3">{plan.icon}</div>
-                    <div className="font-medium text-xl mb-2">{plan.type}</div>
-                    <div className="text-pink-700 text-4xl font-bold mb-3">${plan.price}<span className="text-xl">/day</span></div>
-                    <button
-                      className={`w-full py-1 rounded-full text-md font-medium transition-colors ${
-                        formData.planType === plan.type
-                          ? 'bg-pink-700 text-white'
-                          : 'border border-pink-800 text-pink-800 hover:bg-pink-700 hover:text-white'
-                      }`}
-                    >
-                      {formData.planType === plan.type ? 'Selected' : 'Select'}
-                    </button>
+            <div className="bg-white rounded-xl p-6 space-y-2 shadow-pink-300 shadow-lg">
+              <div className="flex p-4 ">
+                <div className="flex-1 ">
+                  <h3 className="text-3xl font-bold mb-8 ">Select your plan</h3>
+                  <p className="text-black mb-2 mr-60">
+                    This plan offers you the ultimate solution for a stress-free and safe journey throughout India.
+                  </p>
+                  <p className=" font-medium text-pink-700 mb-8">
+                    Pay only for your trip days in India
+                  </p>
+                </div>
+                <div className="flex-1">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+                    {[
+                      { type: 'Solo', price: 5, icon: planSolo },
+                      { type: 'Couple', price: 9, icon: planCouple },
+                      { type: 'Group (up to 4)', price: 15, icon: planGroup }
+                    ].map((plan) => (
+                      <div
+                        key={plan.type}
+                        className={`bg-pink-50  p-4 w-full h-full text-center cursor-pointer  ${
+                          formData.planType === plan.type 
+                            ? 'ring-1 ring-pink-700' 
+                            : ''
+                        }`}
+                        onClick={() => handlePlanSelect(plan.type)}
+                      >
+                        <div className="text-pink-700 h-24  flex items-center justify-center mb-4">
+                          <img src={plan.icon} alt={plan.type} className="h-20  " />
+                        </div>
+                        <div className="font-medium text-lg  mb-4">{plan.type}</div>
+                        <div className="text-pink-700 mb-6">
+                          <span className="text-5xl font-bold">${plan.price}</span>
+                          <span className="text-lg ml-1 text-black">/day</span>
+                        </div>
+                        <button
+                          className={`w-full py-2.5 px-6 rounded-full text-lg font-medium transition-all duration-300 ${
+                            formData.planType === plan.type
+                              ? 'bg-pink-700 text-white'
+                              : 'border-2 border-pink-700 text-pink-700 hover:bg-pink-700 hover:text-white'
+                          }`}
+                        >
+                          {formData.planType === plan.type ? 'Selected' : 'Select'}
+                        </button>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
 
             <div>
               <label className="block text-lg text-black mb-2">How long for?</label>
               <select
-                className="w-full px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800 appearance-none bg-white"
+                className="w-54 px-4 py-2 border border-pink-700  focus:outline-none focus:ring-1 focus:ring-pink-800 appearance-none bg-white"
                 value={formData.duration}
                 onChange={(e) => handleDurationChange(e.target.value)}
               >
@@ -215,7 +232,7 @@ const TripBookingForm = () => {
             <div>
               <label className="block text-lg text-black mb-2">Any other comments?</label>
               <textarea
-                className="w-full px-4 py-2 border border-pink-700 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-800"
+                className="w-2xl h-50 px-4 py-2 border-2 border-pink-700 focus:outline-none focus:ring-1 focus:ring-pink-800"
                 rows="4"
                 placeholder="Any differently abled or elderly traveler, any do's or don'ts, any specific requirement"
                 value={formData.comments}
@@ -243,8 +260,8 @@ const TripBookingForm = () => {
 
       <hr className="border-t-4 border-pink-700 w-full mb-8" />
 
-      <div className="text-center text-lg  py-8 border-2 border-pink-700 rounded-lg mt-8">
-        <p className="text-black ">Can&apos;t find it? Don&apos;t worry. Just because it&apos;s not here, doesn&apos;t mean we can&apos;t do it.</p>
+      <div className="text-center  h-37 py-6 border-4 border-pink-700 mt-6 max-w-2xl mx-auto">
+        <p className="text-black italic">Can&apos;t find it? Don&apos;t worry. Just because it&apos;s not here, doesn&apos;t mean we can&apos;t do it.</p>
         <p className="text-black font-medium my-1">WhatsApp us on +91 8077034423</p>
         <p className="text-black mb-4">WE ARE HERE 24x7</p>
         <button className="px-6 py-2 bg-pink-700 text-white text-xl rounded hover:bg-pink-800 transition-colors font-medium">
@@ -252,7 +269,7 @@ const TripBookingForm = () => {
         </button>
       </div>
 
-      <div className='px-10 w-full flex justify-center'>
+      <div className='px-10 w-full mx-auto flex justify-center mt-16'>
           <img src={comingSoonImage} alt="Coming Soon" className="w-full max-w-7xl h-auto mx-auto" />
       </div>
 

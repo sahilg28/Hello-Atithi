@@ -10,7 +10,7 @@ const Header = () => {
       <div className=" mx-auto">
         <div className="flex py-2 px-12 items-center justify-around">
           <button
-            className="lg:hidden text-rose-600 p-2  "
+            className="lg:hidden text-pink-700 p-2 cursor-pointer "
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
             tabIndex={0}
@@ -21,7 +21,7 @@ const Header = () => {
           </button>
 
           <Link to="/">
-            <div className="flex items-center mt-1 px-4 cursor-pointer">
+            <div className="flex items-center px-4 cursor-pointer">
               <img 
                 src={logo} 
                 alt="Atithi Logo" 
@@ -32,13 +32,13 @@ const Header = () => {
             </div>
           </Link>
 
-          <div className="text-gray-800 font-medium italic hidden lg:block ">
+          <div className="text-black font-medium italic hidden lg:block ">
             24/7 WhatsApp helpline | +91 8077034423
           </div>
 
           <Link to="/trip-form">
             <button
-              className="bg-pink-700 text-white px-4 rounded-sm hover:bg-pink-800 h-14 font-bold shadow-gray-500 shadow-md mt-1 mr-4 "
+              className="bg-pink-700 text-white px-4  h-15 font-semibold text-lg shadow-gray-400 shadow-sm mr-4 cursor-pointer "
               tabIndex={0}
               aria-label="Start My Safe Journey"
             >
@@ -47,9 +47,9 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="hidden lg:flex justify-evenly mt-2 bg-pink-700 p-1 w-screen h-16 ">
+        <div className="hidden lg:flex justify-evenly mt-1 bg-pink-700 p-1 w-screen h-16 px-70 ">
         <button
-            className="text-white font-medium hover:underline decoration-white decoration-2"
+            className="text-white font-medium decoration-white decoration-2 cursor-pointer"
             tabIndex={0}
             aria-label="How We Work"
           >
@@ -57,15 +57,15 @@ const Header = () => {
           </button>
 
           <button
-            className="text-white font-medium hover:underline decoration-white decoration-2"
+            className="text-white font-medium decoration-white decoration-2 cursor-pointer"
             tabIndex={0}
             aria-label="Our Blogs"
           >
-            INDIAs MUST KNOW
+            INDIA&apos;S MUST KNOW
           </button>
 
           <button
-            className="text-white font-medium hover:underline decoration-white decoration-2"
+            className="text-white font-medium decoration-white decoration-2 cursor-pointer"
             tabIndex={0}
             aria-label="Service and Fee"
           >
@@ -74,7 +74,7 @@ const Header = () => {
   
           
           <button
-            className="text-white font-medium hover:underline decoration-white decoration-2"
+            className="text-white font-medium decoration-white decoration-2 cursor-pointer"
             tabIndex={0}
             aria-label="FAQ"
           >
@@ -82,7 +82,7 @@ const Header = () => {
           </button>
           
           <button
-            className="text-white font-medium hover:underline decoration-white decoration-2"
+            className="text-white font-medium decoration-white decoration-2 cursor-pointer"
             tabIndex={0}
             aria-label="Contact"
           >
@@ -105,7 +105,7 @@ const Header = () => {
               </button>
               <nav className="flex flex-col mt-12 ">
               <button
-                  className=" text-gray-700 font-medium  border-b-2 border-pink-700 py-2"
+                  className=" text-gray-700 font-medium  border-b-2 border-pink-700 py-2 cursor-pointer"
                   tabIndex={0}
                   aria-label="How We Work"
                 >
@@ -113,7 +113,7 @@ const Header = () => {
                 </button>
                 
                 <button
-                  className="text-gray-700 font-medium  border-b-2 border-pink-700 py-2"
+                  className="text-gray-700 font-medium  border-b-2 border-pink-700 py-2 cursor-pointer"
                   tabIndex={0}
                   aria-label="Our Blogs"
                 >
@@ -121,7 +121,7 @@ const Header = () => {
                 </button>
   
                 <button
-                  className="text-gray-700 font-medium border-b-2 border-pink-700 py-2"
+                  className="text-gray-700 font-medium border-b-2 border-pink-700 py-2 cursor-pointer"
                   tabIndex={0}
                   aria-label="Service and Fee"
                 >
@@ -129,7 +129,7 @@ const Header = () => {
                 </button>
                 
                 <button
-                  className="text-gray-700 font-medium  border-b-2 border-pink-700 py-2"
+                  className="text-gray-700 font-medium  border-b-2 border-pink-700 py-2 cursor-pointer"
                   tabIndex={0}
                   aria-label="FAQ"
                 >
@@ -137,7 +137,7 @@ const Header = () => {
                 </button>
                 
                 <button
-                  className="text-gray-700 font-medium  border-b-2 border-pink-700 py-2"
+                  className="text-gray-700 font-medium  border-b-2 border-pink-700 py-2 cursor-pointer"
                   tabIndex={0}
                   aria-label="Contact"
                 >

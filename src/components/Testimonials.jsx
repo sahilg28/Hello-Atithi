@@ -67,8 +67,8 @@ const ScrollingTestimonials = () => {
   }, []);
 
   return (
-    <div className="w-screen py-6">
-      <h1 className="text-center text-3xl font-bold text-pink-700 mb-10">TESTIMONIALS</h1>
+    <div className="w-screen py-14 items-center justify-center">
+      <h1 className="text-center text-3xl font-bold text-pink-700 mb-8">TESTIMONIALS</h1>
       <div className="overflow-hidden">
         <div 
           className="flex transition-transform duration-300"
@@ -77,9 +77,9 @@ const ScrollingTestimonials = () => {
           {[...testimonialData, ...testimonialData].map((testimonial, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-72 border border-pink-700 p-4"
+              className="flex-shrink-0 w-96 border border-pink-700 p-4"
             >
-              <h3 className="text-lg font-semibold mb-3 text-pink-800">{testimonial.title}</h3>
+              <h3 className="text-lg font-semibold mb-3 text-pink-700">{testimonial.title}</h3>
               <p className="text-black mb-4">{testimonial.content}</p>
               <div>
                 <p className="font-semibold text-black">{testimonial.author}</p>
