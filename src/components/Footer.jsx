@@ -66,7 +66,7 @@ const Footer = () => {
         <div className="mt-6 pt-4 border-t-2 border-white">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 font-semibold">
             <p className="text-white text-sm">
-              2019-2024 © <span className="text-[#FF1654]">Hello Atithi</span> - All Rights Reserved
+              2019-2025 © <span className="text-[#FF1654]">Hello Atithi</span> - All Rights Reserved
             </p>
             <div className="flex items-center gap-4">
               <span className="text-white text-sm whitespace-nowrap">Payment Partner:</span>
