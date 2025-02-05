@@ -6,8 +6,9 @@ const HeroSection = () => {
       <img
         src={heroBackground}
         alt="Hero Background"
-        className="w-full h-full object-center "
+        className="w-full h-full object-center"
         style={{ objectPosition: 'center 50%' }}
+        loading="lazy"
       />
       
       <div className="absolute inset-0 bg-black/20 flex flex-col items-center justify-center text-center px-4">
@@ -19,7 +20,7 @@ const HeroSection = () => {
         </h1>
         
         <button
-          className="border-2 rounded-4xl text-white px-4 text-2xl py-2 font-semibold "
+          className="border-2 rounded-4xl text-white px-4 text-2xl py-2 font-semibold"
         >
           Starting at $5/day
         </button>

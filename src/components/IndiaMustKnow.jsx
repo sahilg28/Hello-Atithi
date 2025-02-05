@@ -64,6 +64,7 @@ const IndiaMustKnow = () => {
                   src={card.imageUrl}
                   alt="India Must Know"
                   className="w-full h-[200px] object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -8,6 +8,7 @@ const HeroSection2 = () => {
                     src={travelExpertImage} 
                     alt="Travel Expert" 
                     className="max-w-3xl object-cover hidden md:block h-[600px]" 
+                    loading="lazy"
                 />
             </div>
             <div className="md:w-8/12 max-w-lg mb-12 ">

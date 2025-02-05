@@ -25,6 +25,6 @@ const ContactUsSection = () => {
         </div>
       </section>
     );
-  };
+};
   
-  export default ContactUsSection;
+export default ContactUsSection;

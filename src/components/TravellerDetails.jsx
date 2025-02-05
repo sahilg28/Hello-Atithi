@@ -187,7 +187,7 @@ const TripBookingForm = () => {
                         onClick={() => handlePlanSelect(plan.type)}
                       >
                         <div className="text-pink-700 h-24  flex items-center justify-center mb-4">
-                          <img src={plan.icon} alt={plan.type} className="h-20  " />
+                          <img src={plan.icon} alt={plan.type} className="h-20" loading="lazy" />
                         </div>
                         <div className="font-medium text-lg  mb-4">{plan.type}</div>
                         <div className="text-pink-700 mb-6">
@@ -270,7 +270,7 @@ const TripBookingForm = () => {
       </div>
 
       <div className='px-10 w-full mx-auto flex justify-center mt-16'>
-          <img src={comingSoonImage} alt="Coming Soon" className="w-full max-w-7xl h-auto mx-auto" />
+          <img src={comingSoonImage} alt="Coming Soon" className="w-full max-w-7xl h-auto mx-auto" loading="lazy" />
       </div>
 
       <div className="text-center py-4 space-y-4">
@@ -283,13 +283,13 @@ const TripBookingForm = () => {
           <p className="text-lg font-medium mb-4">FOLLOW US ON</p>
           <div className="flex justify-center items-center space-x-6">
             <a href="https://www.facebook.com/helloatithiindia" target="_blank" rel="noopener noreferrer">
-              <img src={fb} alt="Facebook" className="h-12 hover:opacity-80 transition-opacity" />
+              <img src={fb} alt="Facebook" className="h-12 hover:opacity-80 transition-opacity" loading="lazy" />
             </a>
             <a href="https://www.instagram.com/hello_atithi" target="_blank" rel="noopener noreferrer">
-              <img src={ig} alt="Instagram" className="h-12 hover:opacity-80 transition-opacity" />
+              <img src={ig} alt="Instagram" className="h-12 hover:opacity-80 transition-opacity" loading="lazy" />
             </a>
             <a href="https://in.pinterest.com/helloatithi/" target="_blank" rel="noopener noreferrer">
-              <img src={pinterest} alt="Pinterest" className="h-12 hover:opacity-80 transition-opacity" />
+              <img src={pinterest} alt="Pinterest" className="h-12 hover:opacity-80 transition-opacity" loading="lazy" />
             </a>
           </div>
         </div>

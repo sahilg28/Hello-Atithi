@@ -12,6 +12,7 @@ const Card = ({ image, title, description }) => (
         src={image} 
         alt={title} 
         className="w-full h-50 object-contain mb-4"
+        loading="lazy"
       />
       <h3 className="text-pink-700 font-bold text-xl text-center mb-4">{title}</h3>
       <p className="text-black text-center text-md m-4">{description}</p>

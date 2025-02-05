@@ -28,6 +28,7 @@ const Header = () => {
                 className="h-14 w-auto"
                 tabIndex={0}
                 aria-label="Company Logo"
+                loading="lazy"
               />
             </div>
           </Link>
@@ -60,6 +61,7 @@ const Header = () => {
             className="text-white font-medium decoration-white decoration-2 cursor-pointer"
             tabIndex={0}
             aria-label="Our Blogs"
+            onClick={() => window.location.href = '/blog-category'}
           >
             INDIA&apos;S MUST KNOW
           </button>
