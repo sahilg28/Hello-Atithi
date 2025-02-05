@@ -6,8 +6,8 @@ const IndiaMustKnow = () => {
   const cards = [
     {
       id: 1,
-      title: "India Must Know",
-      description: "Best places to visit in north India, The best hotels in India. Garam Chai with Doli and Bills Gate.",
+      title: "Essential Guide: Indian Visa Requirements 2025",
+      description: "India Visa Requirements 2025",
       imageUrl: IMK1
     },
     {

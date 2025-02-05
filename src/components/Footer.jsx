@@ -31,7 +31,7 @@ const Footer = () => {
             <div>
               <h3 className="text-white font-bold mb-6 tracking-wide">HOME</h3>
               <ul className="space-y-5 text-white/90 text-sm">
-                <li className="hover:text-white"><Link to="/blog-category">INDIA MUST KNOW</Link></li>
+                <li className="hover:text-white"><Link to="/blog-category">INDIA&apos;S MUST KNOW</Link></li>
                 <li className="hover:text-white"><Link to="#">HOW WE WORK</Link></li>
                 <li className="hover:text-white"><Link to="#">SERVICES & FEES</Link></li>
                 <li className="hover:text-white"><Link to="#">CONTACT US</Link></li>

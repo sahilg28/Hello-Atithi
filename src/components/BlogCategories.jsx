@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import { ArrowRight } from 'lucide-react';
 import imkImage4 from '../assets/IMK-4.webp';
 import imkImage5 from '../assets/IMK-5.webp';
+import { Link } from 'react-router-dom';
 
-const CategoryCard = ({ title, description, imageSrc, onReadMore }) => (
+const CategoryCard = ({ title, description, imageSrc, link }) => (
   <div className="bg-white rounded-xl p-3 mb-6" 
        style={{ width: '350px', height: '350px',
         boxShadow: '5px 10px 20px rgba(255,20,147, 0.3)',
@@ -23,15 +24,15 @@ const CategoryCard = ({ title, description, imageSrc, onReadMore }) => (
           <p className="text-black text-sm">{description}</p>
         </div>
         <div className="flex justify-end">
-          <button 
-            onClick={onReadMore} 
+          <Link 
+            to={link}
             className="text-pink-700 hover:text-sky-600 flex items-center gap-1 text-sm font-bold mb-2 cursor-pointer"
             aria-label={`Read more about ${title}`}
             tabIndex={0}
           >
             Read More
             <ArrowRight size={16} />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -42,7 +43,7 @@ CategoryCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
-  onReadMore: PropTypes.func.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 const BlogCategories = () => {
@@ -51,19 +52,19 @@ const BlogCategories = () => {
       title: "Essential Guide: Indian Visa Requirements 2025",
       description: "India Visa Requirements 2025",
       imageSrc: imkImage4,
-      onReadMore: () => window.location.href = "/blog-post" 
+      link: "/blog-post",
     },
     {
       title: "India Must Know",
       description: "coming soon!!",
       imageSrc: imkImage5,
-      onReadMore: () => {} // No action for this card currently
+      link: "#",
     },
     {
       title: "India Must Know",
       description: "content here!!",
       imageSrc: imkImage4,
-      onReadMore: () => {} // No action for this card currently
+      link: "#",
     },
   ];
 
@@ -85,7 +86,7 @@ const BlogCategories = () => {
             title={category.title}
             description={category.description}
             imageSrc={category.imageSrc}
-            onReadMore={category.onReadMore}
+            link={category.link}
           />
         ))}
       </div>
