@@ -57,14 +57,8 @@ const Header = () => {
             HOW WE WORK
           </button>
 
-          <Link to="/blog-category">
-            <button
-              className="text-white font-medium decoration-white decoration-2 cursor-pointer"
-              tabIndex={0}
-              aria-label="Our Blogs"
-            >
-              INDIA&apos;S MUST KNOW
-            </button>
+          <Link to="/blog-category" className="text-white font-medium decoration-white decoration-2 cursor-pointer mt-4" tabIndex={0} aria-label="Our Blogs">
+            INDIA&apos;S MUST KNOW
           </Link>
 
           <button
@@ -118,6 +112,7 @@ const Header = () => {
                 <Link to="/blog-category" className="text-gray-700 font-medium border-b-2 border-pink-700 py-2 cursor-pointer" tabIndex={0} aria-label="Our Blogs">
                   INDIA&apos;S MUST KNOW
                 </Link>
+                
   
                 <button
                   className="text-gray-700 font-medium border-b-2 border-pink-700 py-2 cursor-pointer"
