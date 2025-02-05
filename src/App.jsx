@@ -4,6 +4,7 @@ import TripForm from './pages/TripForm'
 import BlogCategory from './pages/Blog_Category'
 import BlogList1 from './pages/Blog_List1'
 import BlogPost from './pages/BlogPost' 
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/blog-all-you-should-know-about-india" element={<BlogList1 />} />
         <Route path="/blog-post" element={<BlogPost />} />
       </Routes>
+      <Analytics />
     </Router>
   )
 }

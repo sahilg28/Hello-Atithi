@@ -30,5 +30,5 @@ To set up the project locally, follow these steps:
 
 To start the application, run:
 ```bash
-npm start
+npm run dev
 ```
