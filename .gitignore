@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+.env
+
 
 # Author Complete folder
 /Author_Complete/

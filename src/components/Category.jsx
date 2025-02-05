@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { ArrowRight } from 'lucide-react';
 import imkImage1 from '../assets/IMK-1.jpg';
 import imkImage3 from '../assets/IMK-3.jpg';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom'; 
 
 const CategoryCard = ({ title, description, image, link }) => (
   <div className="bg-white rounded-xl p-4 mb-6" 
@@ -48,6 +48,8 @@ CategoryCard.propTypes = {
 };
 
 const BlogCategories = () => {
+
+
   const categories = [
     {
       title: "All you should know about India",
@@ -98,7 +100,7 @@ const BlogCategories = () => {
             title={category.title}
             description={category.description}
             image={category.image}
-            link={category.link} // Changed from onViewMore to link
+            link={category.link} 
           />
         ))}
       </div>
