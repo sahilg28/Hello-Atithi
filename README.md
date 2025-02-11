@@ -1,11 +1,20 @@
 # 🌟 Hello Atithi 🌟
 
-Welcome to the **Hello Atithi** project! This is a React application designed for managing trips and related forms. 🚀
+Welcome to the **Hello Atithi** project! This is a project clone of a website **Hello Atithi**, created to evaluate my skills and knowledge in the tech stack. 🚀  
 
-## 📦 Features
+## 📦 Features  
 
-- 🏠 **Home Page**: Displays essential information and navigation.
-- 📝 **Trip Form**: Allows users to submit their trip details easily.
+- 🏠 **Home Page**: Displays essential information and navigation.  
+- 📝 **Form Page**: Allows users to submit their trip details easily.  
+- 📰 **Blog Categories**: Explore different blog categories.  
+- 📄 **Specific Blog Pages**: View content for specific blogs under chosen categories.  
+- 🔧 **Admin Panel**: Manage blogs with the ability to create, edit, and delete posts. You can access the admin panel by adding `/admin` to the URL.  
+
+## 🛠️ Tech Stack  
+
+- **Frontend**: React and TailwindCSS  
+- **Backend**: Express.js  
+- **Database**: MongoDB 
 
 ## 🛠️ Installation
 
@@ -13,7 +22,7 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/hello-atithi.git
+   git clone https://github.com/sahilg28/hello-atithi.git
    ```
 
 2. **Navigate into the project directory**:
